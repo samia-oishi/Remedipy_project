@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra-styles %}
+<link rel="stylesheet" href="{% static 'css/__style.css' %}" />
+{% endblock %}
+{% block content %}
+<section class="banner">
+  <div class="banner-content">
+    <h1>Our Products</h1>
+  </div>
+</section>
+<section class="Products">
+  <h1>Regular Medicines</h1>
+  <p>You can find over the counter medications in this section.</p>
+  <div class="row">
+      <div class="product-section">
+          <div class="product-border">
+            <div class="product-img-center">
+                <img class="product-img" src="{%static 'images/regmed.png'%}">
+            </div>
+            <div>
+              <p class="product-name">
+                <a href="{% url 'product_list' %}">Acidity Medicines</a>
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="product-section">
+          <div class="product-border">
+            <div class="product-img-center">
+                <img class="product-img" src="{%static 'images/prescmed.png'%}">
+            </div>
+            <div>
+              <p class="product-name">
+                <a href="{% url 'product_list' %}">Fever Medicines</a>
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="product-section">
+          <div class="product-border">
+            <div class="product-img-center">
+                <img class="product-img" src="{%static 'images/handwash.png'%}">
+            </div>
+            <div>
+              <p class="product-name">
+                <a href="{% url 'product_list' %}">Cough Syrups</a>
+              </p>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="Products">
+  <h1>Prescription Medicine</h1>
+  <p>Some medicines cannot be bought without prescriptions.</p>
+  <div class="row">
+      <div class="product-section">
+          <div class="product-border">
+            <div class="product-img-center">
+                <img class="product-img" src="{%static 'images/regmed.png'%}">
+            </div>
+            <div>
+              <p class="product-name">
+                <a href="{% url 'product_list' %}">Antibiotics</a>
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="product-section">
+          <div class="product-border">
+            <div class="product-img-center">
+                <img class="product-img" src="{%static 'images/prescmed.png'%}">
+            </div>
+            <div>
+              <p class="product-name">
+                <a href="{% url 'product_list' %}">Injections</a>
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="product-section">
+          <div class="product-border">
+            <div class="product-img-center">
+                <img class="product-img" src="{%static 'images/handwash.png'%}">
+            </div>
+            <div>
+              <p class="product-name">
+                <a href="{% url 'product_list' %}">Sedatives</a>
+              </p>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="Products">
+  <h1>Other Items</h1>
+  <p>We also keep other drug store items!</p>
+  <div class="row">
+      <div class="product-section">
+          <div class="product-border">
+            <div class="product-img-center">
+                <img class="product-img" src="{%static 'images/regmed.png'%}">
+            </div>
+            <div>
+              <p class="product-name">
+                <a href="{% url 'product_list' %}">Femenine Products</a>
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="product-section">
+          <div class="product-border">
+            <div class="product-img-center">
+                <img class="product-img" src="{%static 'images/prescmed.png'%}">
+            </div>
+            <div>
+              <p class="product-name">
+                <a href="{% url 'product_list' %}">Hygience Products</a>
+              </p>
+            </div>
+          </div>
+      </div>
+      <div class="product-section">
+          <div class="product-border">
+            <div class="product-img-center">
+                <img class="product-img" src="{%static 'images/handwash.png'%}">
+            </div>
+            <div>
+              <p class="product-name">
+                <a href="{% url 'product_list' %}">Healthy Edibles</a>
+              </p>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+{% endblock %}
+
+

@@ -1,0 +1,490 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #dfdfdf;
+}
+h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+/* ul {
+  list-style-type: none;
+} */
+/* CSS for the header section */
+.nav-bar {
+    background-color: #003447;
+    color: white;
+    height: 33px;
+    padding: 10px,0;
+}
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(110, 110, 110, 0),rgba(165, 89, 89, 0.514)),url(../images/christina-victoria-craft-ZHys6xN7sUE-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 8px;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+    font-family: sans-serif;
+}
+#right{
+  text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav a img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 33px;
+}
+.cart-sect {
+  /* list-style: none;
+  float: right;
+  margin-top: 0; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 33px;
+}
+.cart-sect li {
+  float: left;
+  padding: 0px 6px;
+}
+.cart-sect li a {
+  font-size: 14px;
+  color: #ffffff;
+}
+.cart-sect li i {
+  font-size: 14px;
+  color: #ffffff;
+}
+.text-box{
+    width: 90%;
+    color: #003447;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+}
+.text-box h1{
+    font-size:55px;
+}
+.text-box p{
+    margin:17px 0px 17px -5px;
+    font-size:20px;
+    color: #003447;
+    padding-bottom: 7px;
+    text-align: left;
+}
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: honeydew;
+  border:2px solid honeydew;
+  border-radius: 10px;
+  padding: 10px 30px;
+  font-size: 14px;
+  background: #003447 ;
+  position: relative;
+  cursor: pointer;
+}
+.hero-btn:hover{
+  border: 2px solid 003447;
+  background: honeydew;
+  color: #003447;
+  transition: 0.5s;;
+}
+
+/* products section */
+
+.Products{
+  width:80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.Products h1,.Products p{
+  color: #003447;
+}
+.product-section {
+  padding-left:15px;
+	padding-right:15px;
+	margin-bottom:20px;
+}
+.product-img {
+	width: 70%;
+	height:270px;
+}
+.product-img-center {
+	text-align:center;
+}
+.product-border {
+	border: 1px solid #d1d1d1;
+  flex-basis: content;
+  background: white;
+	padding:20px;
+  border-radius: 20px;
+}
+.product-name a {
+	color: #232b33;
+	text-decoration: none;
+	font-size: 17px;
+	font-family: Roboto, sans-serif, arial;
+  transition: 0.5s;
+}
+.product-name a:hover {
+	color: blue;
+}
+.product-rating {
+	color: #FFC315;
+	font-size: 14px;
+	padding-top: 6px;
+}
+.product-rating span {
+	font-weight: 600;
+	color: #3c3b3b8c;
+	font-size: 12px;
+	font-family: Roboto, sans-serif, arial;
+}
+
+.product-price {
+	color: #6f6f6f;
+	text-decoration: none;
+	font-size:14px;
+  margin-top:15px;
+}
+  /* CSS for the services section */
+.services{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+/*.serviceCol{
+    flex-basis: 31%;
+    background: #006387;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    border-radius: 5px 5px 50px 50px;
+}*/
+
+  /* CSS for the testimonials section */
+  /* Add container */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Apply styles to Testimonials section */
+.Testimonials {
+  text-align: center;
+}
+
+.Testimonials h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.Testimonials p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.Testi-Col {
+  width: 300px;
+  margin: 0 20px;
+  text-align: center;
+  display: inline-block; /* Allow space between testimonials */
+  vertical-align: top;
+}
+
+.Testi-Col img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.Testi-Col div {
+  margin-top: 20px;
+}
+
+/* Adjust testimonial text size and color */
+.Testi-Col p {
+  font-size: 16px;
+  color: #777;
+}
+
+.Testi-Col h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+/* Style star icons */
+.fa-star, .fa-star-o {
+  font-size: 24px;
+  color: #FFD700;
+  margin-right: 5px;
+}
+
+.fa-star-half-o {
+  font-size: 24px;
+  color: #FFD700;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+  /* CSS for the call to action section */
+  .CalltoAction {
+    text-align: center;
+    padding: 40px;
+    background-color: #e9e9e9;
+  }
+
+  .CalltoAction h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    background-color: #003447;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+/* login stuff */
+
+
+/* About page */
+
+/* Banner styles */
+.banner {
+  background-image: linear-gradient(rgba(76, 76, 76, 0.11),rgba(76, 76, 76, 0.11)),url(../images/bannerpic.png);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  position: relative;
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  font-size: 25px;
+}
+
+
+/* Content styles */
+#content {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.left-column {
+  flex-basis: 60%;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-top: 80px;
+}
+.left-column h2{
+  padding-bottom: 30px;
+  padding-left: 7px;
+  color: #003447;
+}
+.left-column p{
+  color: #003447;
+}
+
+.right-column {
+  flex-basis: 40%;
+  padding-top: 80px;
+}
+.right-column img{
+  border-radius: 30%;
+  margin: 40px;
+  width:80%;
+}
+
+/* contact page */
+
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe{
+    width: 100%;
+    border-radius: 20px;
+}
+.contactUs{
+    width: 80%;
+    margin: auto;
+}
+.contactCol{
+    flex-basis:48%;
+    margin-bottom: 30px;
+}
+.contactCol div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.contactCol div .fa{
+    font-size: 28px;
+    margin: 5px;
+    margin-right: 30px;
+    transition: 0.5s;
+}
+.contactCol div .fa:hover{
+    color: blue;
+}
+.contactCol div p{
+    padding: 0;
+}
+.contactCol div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+.contactCol h2{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.contactCol input, .contactCol textarea{
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 17px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Product-Section CSS Code*/
+.product-section {
+	padding-left:15px;
+	padding-right:15px;
+	margin-bottom:20px;
+}
+.product-img {
+	width:auto;
+	height:270px;
+}
+.product-img-center {
+	text-align:center;
+}
+.product-border {
+	border: 1px solid #d1d1d1;
+	padding:20px;
+}
+.product-name a {
+	color: #232b33;
+	text-decoration: none;
+	font-size: 17px;
+	font-family: Roboto, sans-serif, arial;
+}
+.product-rating {
+	color: #FFC315;
+	font-size: 14px;
+	padding-top: 6px;
+}
+.product-rating span {
+	font-weight: 600;
+	color: #3c3b3b8c;
+	font-size: 12px;
+	font-family: Roboto, sans-serif, arial;
+}
+.product-discounted-price {
+	color: #333;
+	font-size: 18px;
+	letter-spacing: 0.1px;
+	font-weight: 600;
+	font-family: Roboto, sans-serif, arial;
+}
+.product-original-price {
+	color: #6f6f6f;
+	text-decoration: line-through;
+	font-size:14px;
+}
+.product-discount {
+	border: 1px solid #ccc;
+	background: #fff;
+	display: block;
+	font-size: 10px;
+	color: #999;
+	padding: 5px;
+	border-radius: 1px;
+	float: right;
+}
+.product-price {
+	margin-top:15px;
+}
+/*service section */
+.serviceCol{
+  flex-basis:48%;
+  margin-bottom: 30px;
+}
+
+.serviceCol h2{
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.serviceCol input, .serviceCol textarea{
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 17px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}

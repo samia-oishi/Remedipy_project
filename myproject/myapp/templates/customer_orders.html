@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra-styles %}
+<link rel="stylesheet" href="{% static 'css/__style.css' %}" />
+{% endblock %}
+
+{% block title %}customer_orders{% endblock %}
+    <h1>Orders for {{ customer.name }}</h1>
+    <ul>
+        {% for order in orders %}
+            <li>Order ID: {{ order.id }} - Total Amount: ${{ order.total_amount }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra-styles %}
+<link rel="stylesheet" href="{% static 'css/__style.css' %}" />
+{% endblock %}
+{% block content %}
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Our Services</h1>
+    </div>
+  </section>
+
+<section class="contactUs">
+    <div class="row">
+        <div class="serviceCol">
+            <h2>Request a medicine</h2>
+            <form type="submit">
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+                <input type="text" name="contact" placeholder="Enter your contact number" required>
+                <input type="text" name="medName" placeholder="Enter the Medicine name" required>
+                <input type="text" name="medgrp" placeholder="Enter the Medicine's Group" required>
+                <textarea rows="8" name="message" placeholder="Why are you requesting this?"></textarea>
+                <button type="submit" class="hero-btn red-btn">Send Message</button>
+            </form>
+        </div>
+        <div class="right-column">
+      <img src="{%static 'images/24h.jpg'%}" alt="About Us Image"></div>
+        </div>
+</section>
+
+{% endblock %}
+
+
+
+

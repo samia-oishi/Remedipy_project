@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/style.css" />
+<!--{% static 'css/__syle.css' %}-->
+    {% block extra-styles %} {% endblock %}
+
+    <title>{% block title %}ReMedi Home{% endblock %}</title>
+</head>
+<body>
+<section class="nav-bar">
+        <nav>
+             <div>
+                <a href="{% url 'index' %}" class="logo"><img src="{% static 'images/ReMedi.png'%}" alt="logo"></a>
+             </div>
+            <div>
+              <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'products' %}">Products</a></li>
+                <li><a href="{% url 'service' %}">Services</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="cart-sect">
+                 <ul>
+                    <li>
+                        <i class="fa fa-user-circle-o"></i>
+                        <a href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-shopping-cart"></i>
+                        <a href="{% url 'cart' %}">Cart</a>
+                    </li>
+                 </ul>
+            </div>
+        </nav>
+    </section>
+    {% block content %}
+    <!-- content -->
+    <!-- content -->
+    <!-- content -->
+    {% endblock %}
+
+    <footer>
+        <p><b>Made By:</b></p>
+        <div>
+        <div><p>Samia Alam Oishi (21101012)</p></div>
+        <div><p>Zannatul Ferdaus Shawon (21101002)</p></div>
+        <div><p>Riya (21101014)</p></div>
+        </div>
+        <p>&copy; 2023 Re-Medi</p>
+    </footer>
+
+    <div class="page-overlay"></div>
+    <div class="message-container {% if messages %}show{% endif %}">
+        {% if messages %}
+        <div class="message" id="message">
+            {% for message in messages %}
+            <div class="{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

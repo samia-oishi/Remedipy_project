@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra-styles %}
+<link rel="stylesheet" href="{% static 'css/__style.css' %}" />
+{% endblock %}
+{% block content %}
+
+  <section class="banner">
+    <div class="banner-content">
+      <h1>About Us</h1>
+    </div>
+  </section>
+
+  <section id="content">
+    <div class="left-column">
+      <h2>Welcome to Re-Medi</h2>
+      <p>If there’s something that saw an uproar during the Covid-19 pandemic, it was
+        3
+        online marketplaces.
+        However, online pharmacies remained to be a less common idea. Whereas,
+        medicine was a critical need during the time of a pandemic that spread so quickly.</p><br>
+        <p>Even today, one cannot easily find an online drug store in Dhaka in the time of their
+        need.</p><br>
+        <p>This observation motivated our team to attempt to make a social contribution by
+        creating an online drug store website that will deliver all over Dhaka City at any
+        given time.</p><br>
+      <p>ReMedi, derived from the word remedy, is our combined effort to create an epharmacy website that will ensure quick delivery 24/7 anywhere in Dhaka City via
+        third-party delivery platforms, take medicine requests from users with proper
+        prescription, let users search through the pharmacy inventory, deliver medicine
+        from nearby pharmacies instead if the drug is not in our stock, and provide
+        5
+        medicine information, etc., using the website.</p>
+    </div>
+    <div class="right-column">
+      <img src="{%static 'images/regmed.png'%}" alt="About Us Image">
+    </div>
+  </section>
+
+{% endblock %}
+
+

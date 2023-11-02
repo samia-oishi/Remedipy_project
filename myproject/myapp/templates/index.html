@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra-styles %}
+<link rel="stylesheet" href="{% static 'css/__style.css' %}" />
+{% endblock %}
+{% block content %}
+    <!-- Hero section -->
+    <section class="header">
+        <header>
+        <div class="text-box">
+                <h1>Welcome to<br>ReMedi</h1>
+                <p>Your solution<br>to buy medicine<br>anywhere anytime<br>within Dhaka city.</p>
+                <a href="{% url 'about' %}" class="hero-btn">Visit Us to Learn More</a>
+        </div>
+        </header>
+    </section>
+    <!-- products section -->
+    <section class="Products">
+        <h1>Our Products</h1>
+        <p>You can see a glimpse of our products here</p>
+        <div class="row">
+            <div class="product-section">
+                <div class="product-border">
+                  <div class="product-img-center">
+                      <img class="product-img" src="{%static 'images/regmed.png'%}">
+                  </div>
+                  <div>
+                    <p class="product-name">
+                      <a href="{% url 'products' %}">Regular Medicine</a>
+                    </p>
+                  </div>
+                </div>
+            </div>
+            <div class="product-section">
+                <div class="product-border">
+                  <div class="product-img-center">
+                      <img class="product-img" src="{%static 'images/prescmed.png'%}">
+                  </div>
+                  <div>
+                    <p class="product-name">
+                      <a href="{% url 'products' %}">Prescription Medicines</a>
+                    </p>
+                  </div>
+                </div>
+            </div>
+            <div class="product-section">
+                <div class="product-border">
+                  <div class="product-img-center">
+                      <img class="product-img" src="{%static 'images/handwash.png'%}">
+                  </div>
+                  <div>
+                    <p class="product-name">
+                      <a href="{% url 'products' %}">Other Products</a>
+                    </p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-section">
+                <a href="{% url 'products' %}" class="hero-btn">View More Products</a>
+        </div>
+    </section>
+    <!-- services section -->
+    <section class="services">
+        <h1>Our Services</h1>
+        <p>You can see a glimpse of our services here.</p>
+        <div class="row">
+            <div class="services-Col">
+                <h3>Request A Medicine</h3>
+                <p>Here you request via email to import medicine from outside the country.</p>
+            </div>
+            <div class="services-Col">
+                <h3>24/7 Delivery</h3>
+                <p>we provide round-the-clock delivery</p>
+            </div>
+            <div class="services-Col">
+                <h3>Buy medicine from local pharmacies</h3>
+                <p>Here you can buy medicines from local pharmacies in case we are stock out</p>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial section -->
+    <div class="container">
+    <section class="Testimonials">
+        <h1>What Our Customers Say</h1>
+        <p>This section will show you customer testimonials.</p>
+        <div class="row">
+            <div class="Testi-Col">
+                <img src="{%static 'images/man.png'%}" alt="User1">
+                <div>
+                    <h3>John Smith</h3>
+                    <p>Great service! Keep it up.</p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+
+                </div>
+            </div>
+            <div class="Testi-Col">
+                <img src="{%static 'images/girl.png'%}" alt="User2">
+                <div>
+                    <h3>Lily Bennet</h3>
+                    <p>Delivered right on time! Thanks.</p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+            <div class="Testi-Col">
+                <img src="{%static 'images/doc.png'%}" alt="User3">
+                <div>
+                    <h3>Dr. William</h3>
+                    <p>Super Helpful! Highly recommended.</p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <!-- Call to Action Section -->
+    <section class="CalltoAction">
+        <h1>Reach Out to Us for Further Queries:<br></h1>
+        <a href="{% url 'contact' %}" class="hero-btn">Contact Us</a>
+    </section>
+{% endblock %}
