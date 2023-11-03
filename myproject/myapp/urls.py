@@ -30,6 +30,9 @@ urlpatterns = [
     path('login', views.login,name='login'),
     path('cart', views.cart,name='cart'),
     path('product_list', views.product_list,name='product_list'),
+    #path('products/', views.product_list, name='product_list'),
+    #path('product_details', views.product_details,name='product_details'),
+    path('products/<int:product_id>/', views.product_details, name='product_details'),
 ]
 #urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

@@ -34,8 +34,16 @@ from django.shortcuts import render
 from .models import Customer, Product, Order, Prescription, Payment, Category, Manufacturer, Employee, ShippingAddress, Review
 
 def product_list(request):
-    products = Product.objects.all()
-    return render(request, 'product_list.html', {'products': products})
+    #products = Product.objects.all()
+    categories = Category.objects.all()
+    #return render(request, 'product_list.html', {'products': products})
+    return render(request, 'product_list.html', {'categories': categories})
+# def product_details(request):
+#     products = Product.objects.all()
+#     return render(request, 'product_details.html', {'products': products})
+def product_details(request, product_id):
+    product = Product.objects.get(id=product_id)
+    return render(request, 'product_details.html', {'product': product})
 
 def customer_orders(request, customer_id):
     customer = Customer.objects.get(id=customer_id)

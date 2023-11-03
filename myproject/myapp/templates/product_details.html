@@ -1,0 +1,28 @@
+<!-- login.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra-styles %}
+<link rel="stylesheet" href="{% static 'css/__style.css' %}" />
+{% endblock %}
+
+{% block title %}Product Details{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Product Details</h1>
+        <ul>
+            {% for product in products %}
+                <p>Name: {{ product.name}}</p>
+                <p>ID: {{ product.id}}</p>
+                <p>Description: {{ product.description}}</p>
+                <p>Price: {{ product.price}}</p>
+                <p>Quantity: {{ product.quantity}}</p>
+                <p>manufacturer: {{ product.manufacturer.name}}</p>
+                <p>category: {{ product.category.name}}</p>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'product_list' %}" >Go Back to list</a>
+    </div>
+
+{% endblock %}

@@ -9,23 +9,24 @@
 {% block title %}Product List{% endblock %}
 
 {% block content %}
-    <h1>Product List</h1>
-    <ul>
-        {% for product in products %}
-            <li>{{ product.name }} - Price: ${{ product.price }}</li>
-        {% endfor %}
-    </ul>
 <div>
+    <h1>Product List</h1>
+<!--    <ul>-->
+<!--        {% for product in products %}-->
+<!--            <li><a href="{% url 'product_details' %}" >{{ product.name }}</a></li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
     <ul>
-        <h1>Product Details</h1>
-        <p>Name: {{ product.name}}</p>
-        <p>Description: {{ product.description}}</p>
-        <p>Price: {{ product.price}}</p>
-        <p>Quantity: {{ product.quantity}}</p>
-        <p>manufacturer: {{ product.manufacture}}</p>
-        <p>category: {{ product.category}}</p>
-
+        {% for category in categories %}
+        <li>{{ category.name }}
+            <ul>
+                {% for product in category.product_set.all %}
+                    <li><a href="{% url 'product_details' product.id%}">{{ product.name }}</a></li>
+                {% endfor %}
+<!--                product.id-->
+            </ul>
+        </li>
+    {% endfor %}
     </ul>
 </div>
-
 {% endblock %}
