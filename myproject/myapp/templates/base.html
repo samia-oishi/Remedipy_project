@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="static/css/style.css" />
-<!--{% static 'css/__syle.css' %}-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     {% block extra-styles %} {% endblock %}
 
     <title>{% block title %}ReMedi Home{% endblock %}</title>
@@ -50,24 +49,13 @@
     {% endblock %}
 
     <footer>
-        <p><b>Made By:</b></p>
-        <div>
+      <p><b>Made By:</b></p>
+      <div class="footer-content">
         <div><p>Samia Alam Oishi (21101012)</p></div>
         <div><p>Zannatul Ferdaus Shawon (21101002)</p></div>
         <div><p>Riya (21101014)</p></div>
-        </div>
-        <p>&copy; 2023 Re-Medi</p>
+      </div>
+      <p>&copy; 2023 ReMedi</p>
     </footer>
-
-    <div class="page-overlay"></div>
-    <div class="message-container {% if messages %}show{% endif %}">
-        {% if messages %}
-        <div class="message" id="message">
-            {% for message in messages %}
-            <div class="{{ message.tags }}">{{ message }}</div>
-            {% endfor %}
-        </div>
-        {% endif %}
-    </div>
 </body>
 </html>

@@ -3,27 +3,29 @@
 {% load static %}
 
 {% block extra-styles %}
-<link rel="stylesheet" href="{% static 'css/__style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 {% endblock %}
 
 {% block title %}Login{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="login-container">
-        <h2>Login</h2>
-        <form method="post" action="{% url 'login' %}">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="u_name">Username</label>
-                <input type="text" name="u_name" id="u_name" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="u_password">Password</label>
-                <input type="password" name="u_password" id="u_password" class="form-control" required>
-            </div>
-            <button type="submit" class="btn-primary">Login</button>
+<div class="login">
+    <div class="form">
+        <form class="registration-form">
+            <input type="text" placeholder="name" />
+            <input type="password" placeholder="password" />
+            <input type="text" placeholder="email" />
+            <button>Create</button>
+            <p class="alternate"><a href="#">Log In</a></p>
+        </form>
+        <form class="login-form">
+            <input type="text" placeholder="username" />
+            <input type="password" placeholder="password" />
+            <button>Login</button>
+            <p class="alternate"><a href="#">Register</a></p>
         </form>
     </div>
 </div>
+<script src="{% static 'Javascript/jquery-3.6.4.min.js' %}"></script>
+<script src="{% static 'JavaScript/script.js' %}"></script>
 {% endblock %}

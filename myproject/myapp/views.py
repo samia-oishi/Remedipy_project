@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from .models import Product
 # Create your views here.
 def index(request):
     return render(request,'index.html')
@@ -12,19 +13,19 @@ def contact(request):
 def service(request):
     return render(request,'service.html')
 def login(request):
-    if request.method == "POST":
-        form = Captcha(request.POST)
-        if form.is_valid():
-            username = request.POST.get("u_name")
-            password = request.POST.get("u_password")
-            authenticated_user = authenticate(request, username=username, password=password)
-
-            if authenticated_user is not None:
-                auth_login(request, authenticated_user)
-                messages.success(request, f"Welcome, {username}!")
-                return redirect("home")
-            else:
-                messages.error(request, "Invalid username or password.")
+    # if request.method == "POST":
+    #     form = Captcha(request.POST)
+    #     if form.is_valid():
+    #         username = request.POST.get("u_name")
+    #         password = request.POST.get("u_password")
+    #         authenticated_user = authenticate(request, username=username, password=password)
+    #
+    #         if authenticated_user is not None:
+    #             auth_login(request, authenticated_user)
+    #             messages.success(request, f"Welcome, {username}!")
+    #             return redirect("home")
+    #         else:
+    #             messages.error(request, "Invalid username or password.")
 
 
     return render(request, "login.html", {})
@@ -41,10 +42,14 @@ def product_list(request):
 # def product_details(request):
 #     products = Product.objects.all()
 #     return render(request, 'product_details.html', {'products': products})
+# def product_details(request, product_id):
+#     product = Product.objects.all
+#     context= {'product': product}
+#     return render(request, 'product_details.html', context)
 def product_details(request, product_id):
-    product = Product.objects.get(id=product_id)
-    return render(request, 'product_details.html', {'product': product})
-
+    product = get_object_or_404(Product, id=product_id)
+    context = {'product': product}
+    return render(request, 'product_details.html', context)
 def customer_orders(request, customer_id):
     customer = Customer.objects.get(id=customer_id)
     orders = Order.objects.filter(customer=customer)
