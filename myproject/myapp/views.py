@@ -11,49 +11,33 @@ def about(request):
 def contact(request):
     return render(request,'contact.html')
 def service(request):
+
     return render(request,'service.html')
 def login(request):
-    # if request.method == "POST":
-    #     form = Captcha(request.POST)
-    #     if form.is_valid():
-    #         username = request.POST.get("u_name")
-    #         password = request.POST.get("u_password")
-    #         authenticated_user = authenticate(request, username=username, password=password)
-    #
-    #         if authenticated_user is not None:
-    #             auth_login(request, authenticated_user)
-    #             messages.success(request, f"Welcome, {username}!")
-    #             return redirect("home")
-    #         else:
-    #             messages.error(request, "Invalid username or password.")
-
 
     return render(request, "login.html", {})
+def register(request):
+
+    return render(request, "register.html", {})
+
 def cart(request):
     return render(request,'cart.html')
 from django.shortcuts import render
-from .models import Customer, Product, Order, Prescription, Payment, Category, Manufacturer, Employee, ShippingAddress, Review
+from .models import User, Product, Order, Prescription, Payment, Category, Manufacturer, Employee, ShippingAddress, Review
 
 def product_list(request):
     #products = Product.objects.all()
     categories = Category.objects.all()
     #return render(request, 'product_list.html', {'products': products})
     return render(request, 'product_list.html', {'categories': categories})
-# def product_details(request):
-#     products = Product.objects.all()
-#     return render(request, 'product_details.html', {'products': products})
-# def product_details(request, product_id):
-#     product = Product.objects.all
-#     context= {'product': product}
-#     return render(request, 'product_details.html', context)
 def product_details(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     context = {'product': product}
     return render(request, 'product_details.html', context)
-def customer_orders(request, customer_id):
-    customer = Customer.objects.get(id=customer_id)
-    orders = Order.objects.filter(customer=customer)
-    return render(request, 'customer_orders.html', {'customer': customer, 'orders': orders})
+def User_orders(request, User_id):
+    Users = User.objects.get(id=User_id)
+    orders = Order.objects.filter(User=User)
+    return render(request, 'customer_orders.html', {'User': Users, 'orders': orders})
 
 def add_product(request):
     if request.method == 'POST':

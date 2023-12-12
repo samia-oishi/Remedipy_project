@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Customer, Product, Order, Prescription, Payment, Category, Manufacturer, Employee, ShippingAddress, Review
+from .models import User, Product, Order, Prescription, Payment, Category, Manufacturer, Employee, ShippingAddress, Review
 
-admin.site.register(Customer)
+admin.site.register(User)
 admin.site.register(Product)
 admin.site.register(Order)
 admin.site.register(Prescription)

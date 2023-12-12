@@ -2,16 +2,13 @@ body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #dfdfdf;
+  background-color: #e4e8ff;
 }
 h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
-/* ul {
-  list-style-type: none;
-} */
 /* CSS for the header section */
 .nav-bar {
     background-color: #003447;
@@ -57,9 +54,6 @@ nav a img{
   height: 33px;
 }
 .cart-sect {
-  /* list-style: none;
-  float: right;
-  margin-top: 0; */
   position: absolute;
   top: 0;
   right: 0;
@@ -96,187 +90,185 @@ nav a img{
     padding-bottom: 7px;
     text-align: left;
 }
-.hero-btn{
-  display: inline-block;
-  text-decoration: none;
-  color: honeydew;
-  border:2px solid honeydew;
-  border-radius: 10px;
-  padding: 10px 30px;
-  font-size: 14px;
-  background: #003447 ;
-  position: relative;
-  cursor: pointer;
-}
-.hero-btn:hover{
-  border: 2px solid 003447;
-  background: honeydew;
-  color: #003447;
-  transition: 0.5s;;
-}
+  .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: honeydew;
+    border:2px solid honeydew;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 14px;
+    background: #003447 ;
+    position: relative;
+    cursor: pointer;
+  }
+  .hero-btn:hover{
+    border: 2px solid #003447;
+    background: honeydew;
+    color: #003447;
+    transition: 0.5s;;
+  }
 
 /* products section */
 
-.Products{
+  .Products{
   width:80%;
   margin: auto;
   text-align: center;
   padding-top: 100px;
-}
-.Products h1,.Products p{
+  }
+  .Products h1,.Products p{
   color: #003447;
-}
-.product-section {
-  padding-left:15px;
+  }
+  .product-section {
+    padding-left:15px;
 	padding-right:15px;
 	margin-bottom:20px;
-}
-.product-img {
+  }
+  .product-img {
 	width: 70%;
 	height:270px;
-}
-.product-img-center {
+  }
+  .product-img-center {
 	text-align:center;
-}
-.product-border {
+  }
+  .product-border {
 	border: 1px solid #d1d1d1;
-  flex-basis: content;
-  background: white;
-	padding:20px;
-  border-radius: 20px;
-}
-.product-name a {
+    flex-basis: content;
+    background: white;
+    padding:20px;
+    border-radius: 20px;
+  }
+  .product-name a {
 	color: #232b33;
 	text-decoration: none;
 	font-size: 17px;
 	font-family: Roboto, sans-serif, arial;
-  transition: 0.5s;
-}
-.product-name a:hover {
+    transition: 0.5s;
+  }
+  .product-name a:hover {
 	color: blue;
-}
-.product-rating {
+  }
+  .product-rating {
 	color: #FFC315;
 	font-size: 14px;
 	padding-top: 6px;
-}
-.product-rating span {
+  }
+  .product-rating span {
 	font-weight: 600;
 	color: #3c3b3b8c;
 	font-size: 12px;
 	font-family: Roboto, sans-serif, arial;
-}
+  }
 
-.product-price {
+  .product-price {
 	color: #6f6f6f;
 	text-decoration: none;
 	font-size:14px;
-  margin-top:15px;
-}
+    margin-top:15px;
+  }
   /* CSS for the services section */
-.services{
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-h1{
-    font-size: 36px;
-    font-weight: 600;
-}
-p{
-    color: gray;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 22px;
-    padding: 10px;
-}
-.row{
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-}
-/*.serviceCol{
-    flex-basis: 31%;
-    background: #006387;
-    color: white;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    border-radius: 5px 5px 50px 50px;
-}*/
+  .services{
+     width: 90%;
+     margin: auto;
+     text-align: center;
+     padding-top: 100px;
+  }
+  .services-Col{
+    border: 1px solid #d1d1d1;
+    flex-basis: content;
+    background: white;
+    padding:20px;
+    margin: 10px;
+    border-radius: 20px;
+  }
+  h1{
+     font-size: 36px;
+     font-weight: 600;
+  }
+  p{
+     color: grey;
+     font-size: 15px;
+     font-weight: 400;
+     line-height: 22px;
+     padding: 10px;
+  }
+  .row{
+     margin-top: 5%;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;
+     align-items: center;
+  }
 
   /* CSS for the testimonials section */
   /* Add container */
-.container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-}
+  .container {
+     max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+  }
 
-/* Apply styles to Testimonials section */
-.Testimonials {
-  text-align: center;
-}
+    /* Apply styles to Testimonials section */
+    .Testimonials {
+      text-align: center;
+    }
 
-.Testimonials h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
+    .Testimonials h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
 
-.Testimonials p {
-  font-size: 20px;
-  color: #555;
-  margin-bottom: 40px;
-}
+    .Testimonials p {
+      font-size: 20px;
+      color: #003447;
+      margin-bottom: 40px;
+    }
 
-.Testi-Col {
-  width: 300px;
-  margin: 0 20px;
-  text-align: center;
-  display: inline-block; /* Allow space between testimonials */
-  vertical-align: top;
-}
+    .Testi-Col {
+      width: 300px;
+      margin: 0 20px;
+      text-align: center;
+      display: inline-block; /* Allow space between testimonials */
+      vertical-align: top;
+    }
 
-.Testi-Col img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
+    .Testi-Col img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
 
-.Testi-Col div {
-  margin-top: 20px;
-}
+    .Testi-Col div {
+      margin-top: 20px;
+    }
 
-/* Adjust testimonial text size and color */
-.Testi-Col p {
-  font-size: 16px;
-  color: #777;
-}
+    /* Adjust testimonial text size and color */
+    .Testi-Col p {
+      font-size: 16px;
+      color: #777;
+    }
 
-.Testi-Col h3 {
-  font-size: 22px;
-  margin: 10px 0;
-}
+    .Testi-Col h3 {
+      font-size: 22px;
+      margin: 10px 0;
+    }
 
-/* Style star icons */
-.fa-star, .fa-star-o {
-  font-size: 24px;
-  color: #FFD700;
-  margin-right: 5px;
-}
+    /* Style star icons */
+    .fa-star, .fa-star-o {
+      font-size: 24px;
+      color: #FFD700;
+      margin-right: 5px;
+    }
 
-.fa-star-half-o {
-  font-size: 24px;
-  color: #FFD700;
-  margin-right: 5px;
-  position: relative;
-  top: 2px;
-}
+    .fa-star-half-o {
+      font-size: 24px;
+      color: #FFD700;
+      margin-right: 5px;
+      position: relative;
+      top: 2px;
+    }
 
   /* CSS for the call to action section */
   .CalltoAction {
@@ -294,44 +286,49 @@ p{
     background-color: #003447;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
+  footer p{
+    color: #e4e8ff;
+  }
 
   .footer-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
   .footer-content div {
-    border-right: 1px solid #fff;
-    padding-right: 10px; /* Adjust as needed for spacing */
-    margin-right: 10px; /* Adjust as needed for spacing */
+    border-right: 3px solid #fff;
+    padding-right: 80px; /* Adjust as needed for spacing */
+    margin-right: 80px; /* Adjust as needed for spacing */
   }
 
   .footer-content div:last-child {
     border-right: none;
-    padding-right: 0;
-    margin-right: 0;
+    /*padding-right: 0;
+    margin-right: 0;*/
   }
 
     /* login page stuff */
   .login {
-     width: 500px;
-     padding: 10px 0 0 0;
+     width: auto;
+     padding: 100px;
      margin: auto;
-
+     background: url(../images/bannerpic.png);
+     background-size:cover;
+     background-position:relative;
   }
 
   .form {
      position: relative;
      z-index: 1;
-     background-color: #fff;
      max-width: 360px;
      margin: 0 auto 100px;
      padding: 45px;
      text-align: center;
      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+     background: #e4e8ff;
   }
 
   .form input {
@@ -354,7 +351,7 @@ p{
      width: 100%;
      border: 0;
      padding: 15px;
-     color: #FFFFFF;
+     color: #fff;
      font-size: 14px;
      -webkit-transition: all 0.3 ease;
      transition: all 0.3 ease;
@@ -365,17 +362,9 @@ p{
     background: #3d3d3d;
   }
 
-.form .alternate {
-    margin: 20px 0 0;
-    font-size: 16px;
-  }
-.form .alternate a {
-    color: #3d3d3d;
-    text-decoration: underline;
-  }
-.form .registration-form {
-    display: none;
-  }
+.form button a{
+    color:white;
+}
 
 /* About page */
 

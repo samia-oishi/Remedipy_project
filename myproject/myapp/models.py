@@ -1,10 +1,9 @@
 from django.db import models
 
-class Customer(models.Model):
+class User(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
-    phone_number = models.CharField(max_length=15)
-    address = models.TextField()
+    password = models.CharField(max_length=15)
 
     def __str__(self):
         return self.name
@@ -22,7 +21,8 @@ class Product(models.Model):
         return self.name
 
 class Order(models.Model):
-    customer = models.ForeignKey('Customer', on_delete=models.CASCADE)
+    User = models.ForeignKey('User', on_delete=models.CASCADE, default=1)
+    address = models.TextField()
     order_date = models.DateTimeField(auto_now_add=True)
     total_amount = models.DecimalField(max_digits=10, decimal_places=2)
     payment_status = models.CharField(max_length=20)
@@ -31,7 +31,7 @@ class Order(models.Model):
         return f"Order ID: {self.id}"
 
 class Prescription(models.Model):
-    customer = models.ForeignKey('Customer', on_delete=models.CASCADE)
+    User = models.ForeignKey('User', on_delete=models.CASCADE,default=1)
     doctor_name = models.CharField(max_length=100)
     prescription_date = models.DateField()
     expiry_date = models.DateField()
@@ -75,7 +75,7 @@ class Employee(models.Model):
         return self.name
 
 class ShippingAddress(models.Model):
-    customer = models.ForeignKey('Customer', on_delete=models.CASCADE)
+    User = models.ForeignKey('User', on_delete=models.CASCADE,default=1)
     address = models.TextField()
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=50)
@@ -86,7 +86,7 @@ class ShippingAddress(models.Model):
 
 class Review(models.Model):
     product = models.ForeignKey('Product', on_delete=models.CASCADE)
-    customer = models.ForeignKey('Customer', on_delete=models.CASCADE)
+    User = models.ForeignKey('User', on_delete=models.CASCADE ,default=1)
     rating = models.IntegerField()
     comment = models.TextField()
     review_date = models.DateTimeField(auto_now_add=True)
