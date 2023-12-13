@@ -1,4 +1,4 @@
-<!-- login.html -->
+<!-- register.html -->
 {% extends 'base.html' %}
 {% load static %}
 
@@ -11,15 +11,24 @@
 {% block content %}
 <div class="login">
     <div class="form">
-        <form>
+        <form method="post" action="">
             <h3>User Registration</h3>
-            <input type="text" placeholder="name" />
-            <input type="password" placeholder="password" />
-            <input type="text" placeholder="email" />
-            <button><a href="{% url 'login' %}">Submit</a></button>
+            {% csrf_token %}
+            {{form.username.label}}
+            {{form.username}}
+
+            {{form.email.label}}
+            {{form.email}}
+
+            {{form.password1.label}}
+            {{form.password1}}
+
+            {{form.password2.label}}
+            {{form.password2}}
+
+            <button type="submit">Create User</button>
         </form>
     </div>
 </div>
-<script src="{% static 'Javascript/jquery-3.6.4.min.js' %}"></script>
-<script src="{% static 'JavaScript/script.js' %}"></script>
+
 {% endblock %}

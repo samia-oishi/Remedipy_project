@@ -11,17 +11,14 @@
 {% block content %}
 <div>
     <h1>Product List</h1>
-<!--    <ul>-->
-<!--        {% for product in products %}-->
-<!--            <li><a href="{% url 'product_details' %}" >{{ product.name }}</a></li>-->
-<!--        {% endfor %}-->
-<!--    </ul>-->
+
     <ul>
         {% for category in categories %}
         <li>{{ category.name }}
             <ul>
                 {% for product in category.product_set.all %}
-                    <li><a href="{% url 'product_details' product.id%}">{{ product.name }}</a></li>
+                    <li><a href="{% url 'product_details' product.id%}">{{ product.name }}</a>
+                    <button type="submit"><a href="{% url 'cart' %}">Add to Cart</a></button></li>
                 {% endfor %}
 <!--                product.id-->
             </ul>

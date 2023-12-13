@@ -14,24 +14,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
-from myapp import views
-
-#from django.conf import settings
-#from django.conf.urls.static import static
+from.views import *
 
 urlpatterns = [
-    path('', views.index,name='index'),
-    path('products', views.products,name='products'),
-    path('about', views.about,name='about'),
-    path('contact', views.contact,name='contact'),
-    path('service', views.service,name='service'),
-    path('login', views.login,name='login'),
-    path('register', views.register, name='register'),
-    path('cart', views.cart ,name='cart'),
-    path('product_list', views.product_list,name='product_list'),
-    path('products/<int:product_id>/', views.product_details, name='product_details'),
+    path('', index, name='index'),
+    path('products', products,name='products'),
+    path('about', about,name='about'),
+    path('contact',contact,name='contact'),
+    path('service', service,name='service'),
+    path('login', login,name='login'),
+    path('register',register_view, name='register'),
+    path('cart/', cart, name='cart'),
+    path('product_list', product_list, name='product_list'),
+    path('products/<int:product_id>/', product_details, name='product_details'),
 ]
-#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

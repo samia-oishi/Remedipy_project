@@ -1,24 +1,71 @@
-from django.shortcuts import render, get_object_or_404
+from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth.forms import UserCreationForm
+from .forms import CreateUserForm
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from django.http import HttpResponse
-from .models import Product
+from .models import *
 # Create your views here.
+
+
 def index(request):
-    return render(request,'index.html')
+
+    return render(request, 'index.html')
+
+
 def products(request):
     return render(request,'products.html')
+
 def about(request):
     return render(request,'about.html')
+
+
 def contact(request):
-    return render(request,'contact.html')
+    return render(request, 'contact.html')
+
+
 def service(request):
 
     return render(request,'service.html')
+
+
 def login(request):
 
     return render(request, "login.html", {})
-def register(request):
 
-    return render(request, "register.html", {})
+
+def register_view(request):
+    form = CreateUserForm()
+    if request.method=='POST':
+        form= UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+    context = {'form':form}
+    return render(request,'register.html',context)
+    #
+    # if request.method == "POST":
+    #     form = UserForm(request.POST)
+    #     if form.is_valid():
+    #         user_name = form.cleaned_data.get("user_name")
+    #         user_email = form.cleaned_data.get("user_email")
+    #         user_password = form.cleaned_data.get("u_password")
+    #
+    #         user = User.objects.create_user(username=user_name, email=user_email, password=user_password)
+    #         user.save()
+    #
+    #         authenticated_user = authenticate(request, username=user_name, password=user_password)
+    #
+    #         if authenticated_user is not None:
+    #             auth_login(request, authenticated_user)
+    #             messages.success(request, "Your account has been successfully created.")
+    #             return redirect("index")
+    #         else:
+    #             messages.error(request, "User registration failed. Please try again.")
+
+    return render(request, "register.html", {"form": form})
+def logout(request):
+
+    return redirect('index')
 
 def cart(request):
     return render(request,'cart.html')
